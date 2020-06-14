@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -66,9 +67,13 @@ public class TicTacToeWebTest {
 	 @BeforeAll
 	 public static void setupClass() {
 		 WebDriverManager.chromedriver().setup();
-		  WebApp.start();
+		 WebApp.start();
 	 }
 	 
+	@AfterAll
+	public static void teardownClass() { 
+		WebApp.stop();
+	}
 	 @BeforeEach
 	 public void setupTest() {
 		 navegador1 = new ChromeDriver();
