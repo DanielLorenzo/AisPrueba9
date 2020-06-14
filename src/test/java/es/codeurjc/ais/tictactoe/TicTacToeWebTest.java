@@ -32,8 +32,8 @@ public class TicTacToeWebTest {
 		jugadores.add(j1);
 		jugadores.add(j2);
 
-		n1.get("http://localhost:8081");
-		n2.get("http://localhost:8081");
+		n1.get("http://localhost:8080");
+		n2.get("http://localhost:8080");
 		 
 		WebElement nombreN1 = n1.findElement(By.id("nickname"));
 		nombreN1.sendKeys("Jugador1");
