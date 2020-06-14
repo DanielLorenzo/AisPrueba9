@@ -65,8 +65,8 @@ public class TicTacToeWebTest {
 	
 	 @BeforeAll
 	 public static void setupClass() {
-		 WebApp.start();
 		 WebDriverManager.chromedriver().setup();
+		  WebApp.start();
 	 }
 	 
 	 @BeforeEach
